@@ -5,7 +5,7 @@
         const response = await fetch('https://api.github.com/repos/abhisheksen999/MyBooks/contents/webpage-for-each-book');
         const data = await response.json();
         let htmlString = '<ul>';
-        let filePathPrefix = 'https://abhishekSen999.github.io/MyBooks/';
+        let filePathPrefix = '';
         for (let file of data) {
           htmlString += `<li><a href="${filePathPrefix}${file.path}">${file.name}</a></li>`;
         }
